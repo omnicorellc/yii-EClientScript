@@ -1900,7 +1900,7 @@ class JSTokenizer
 			{
 				case '0':
 					// hexadecimal
-					if (($input[1] == 'x' || $input[1] == 'X') && preg_match('/^0x[0-9a-f]+/i', $input, $match))
+					if (isset($input[1]) && ($input[1] == 'x' || $input[1] == 'X') && preg_match('/^0x[0-9a-f]+/i', $input, $match))
 					{
 						$tt = TOKEN_NUMBER;
 						break;
